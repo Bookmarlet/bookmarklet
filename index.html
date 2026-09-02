@@ -21,9 +21,10 @@
 
         <h1 class="Main_title" style="color: #3385ff;">Bookmarklet Unofficial Website</h1>
 
-        <div style="width: 100px; margin-bottom: 10px;">
-          <textarea id="myBox" readonly style="width: 100%; height: 40px; background-color: white; color: black; resize: none; overflow-x: auto; white-space: nowrap;">Hello World</textarea>
+        <div style="display: flex; align-items: center; gap: 8px;">
           <button onclick="copyText()">Add to Clipboard</button>
+    
+          <textarea id="myBox" readonly style="width: 100px; height: 40px; background-color: white; color: black; resize: none; overflow-x: auto; white-space: nowrap;">Hello World</textarea>
         </div>
 
         <script>
@@ -34,6 +35,7 @@
             alert("Copied to clipboard!");
           }
         </script>
+
 
         
         <!-- Load external JavaScript -->

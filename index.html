@@ -19,6 +19,21 @@
 
     <body>
 
+        <div style="width: 100px; margin-bottom: 10px;">
+          <textarea id="myBox" style="width: 100%; height: 40px; background-color: white; color: black; resize: none; overflow-x: auto; white-space: nowrap;">Hello World</textarea>
+          <button onclick="copyText()">Add to Clipboard</button>
+        </div>
+
+        <script>
+          function copyText() {
+            const box = document.getElementById("myBox");
+            box.select();
+            navigator.clipboard.writeText(box.value);
+            alert("Copied to clipboard!");
+          }
+        </script>
+
+
         <h1 class="Main_title" style="color: #3385ff;">Bookmarklet Unofficial Website</h1>
         
         <!-- Load external JavaScript -->

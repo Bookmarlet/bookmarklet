@@ -3,36 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bookmarklet Installer</title>
+    <title>Bookmarklet Suite</title>
     <!-- Link to external CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <!-- Replace the src with your own GIF or PNG file -->
-        <img class="preview-img" src="https://placeholder.com" alt="Bookmarklet Feature Graphic">
-        
-        <h1>Dark Mode Toggle</h1>
-        <p>A simple tool to force dark mode on any website. Choose your preferred installation method below.</p>
+    <header class="header">
+        <h1>My Bookmarklet Tools</h1>
+        <p>Drag the primary buttons directly to your bookmarks bar, or click the text blocks to copy the code manually.</p>
+    </header>
 
-        <!-- Method 1: Drag & Drop Installation Button -->
-        <!-- Replace the javascript code inside href with your custom tool logic -->
-        <a class="bookmarklet-btn" href="javascript:(function(){var el=document.createElement('style');el.innerHTML='html { filter: invert(1) hue-rotate(180deg); } img, video { filter: invert(1) hue-rotate(180deg); }';document.head.appendChild(el);})();" title="Drag me to your bookmarks bar">
-            <span>&eand;</span> Drag to Bookmarks Bar
-        </a>
+    <main class="grid-container">
 
-        <div class="divider"></div>
+        <!-- CARD 1: Dark Mode Toggle -->
+        <article class="card">
+            <img class="preview-img" src="https://placeholder.com" alt="Dark Mode Graphic">
+            <h2>Dark Mode Toggle</h2>
+            <p class="description">Forces a high-contrast inverted dark mode on websites that don't natively support it.</p>
+            
+            <a class="bookmarklet-btn" href="javascript:(function(){var el=document.createElement('style');el.innerHTML='html { filter: invert(1) hue-rotate(180deg); } img, video { filter: invert(1) hue-rotate(180deg); }';document.head.appendChild(el);})();" title="Drag me to your bookmarks bar">
+                <span>&eand;</span> Drag to Bookmarks
+            </a>
 
-        <!-- Method 2: Manual Copy & Paste Box -->
-        <div class="code-box-container">
-            <label for="bookmarkletCode">Code Snippet</label>
-            <!-- Single click inside this box auto-selects everything for fast manual copy -->
-            <textarea id="bookmarkletCode" class="code-box" rows="3" readonly>javascript:(function(){var el=document.createElement('style');el.innerHTML='html { filter: invert(1) hue-rotate(180deg); } img, video { filter: invert(1) hue-rotate(180deg); }';document.head.appendChild(el);})();</textarea>
-            <span class="hint">Click inside the box to auto-select all, copy (Ctrl+C), and paste into a bookmark URL field.</span>
-        </div>
-    </div>
+            <div class="divider"></div>
+
+            <div class="code-box-container">
+                <label>Manual Code</label>
+                <textarea class="code-box" rows="2" readonly>javascript:(function(){var el=document.createElement('style');el.innerHTML='html { filter: invert(1) hue-rotate(180deg); } img, video { filter: invert(1) hue-rotate(180deg); }';document.head.appendChild(el);})();</textarea>
+            </div>
+        </article>
+
+        <!-- CARD 2: Print Friendly Mode -->
+        <article class="card">
+            <img class="preview-img" src="https://placeholder.com" alt="Print Friendly Graphic">
+            <h2>Print Friendly</h2>
+            <p class="description">Instantly strips away sidebars, headers, ads, and backgrounds to make pages readable and cheap to print.</p>
+            
+            <a class="bookmarklet-btn" href="javascript:(function(){var el=document.createElement('style');el.innerHTML='nav,aside,footer,header,.ads,.sidebar{display:none!important;}body{background:#fff!important;color:#000!important;}';document.head.appendChild(el);})();" title="Drag me to your bookmarks bar">
+                <span>&eand;</span> Drag to Bookmarks
+            </a>
+
+            <div class="divider"></div>
+
+            <div class="code-box-container">
+                <label>Manual Code</label>
+                <textarea class="code-box" rows="2" readonly>javascript:(function(){var el=document.createElement('style');el.innerHTML='nav,aside,footer,header,.ads,.sidebar{display:none!important;}body{background:#fff!important;color:#000!important;}';document.head.appendChild(el);})();</textarea>
+            </div>
+        </article>
+
+        <!-- CARD 3: Word Counter -->
+        <article class="card">
+            <img class="preview-img" src="https://placeholder.com" alt="Word Counter Graphic">
+            <h2>Page Word Counter</h2>
+            <p class="description">Scans the active document and displays an alert pop-up showing the estimated total word count.</p>
+            
+            <a class="bookmarklet-btn" href="javascript:(function(){var text=document.body.innerText||document.body.textContent;alert('Estimated Word Count: ' + text.trim().split(/\s+/).length);})();" title="Drag me to your bookmarks bar">
+                <span>&eand;</span> Drag to Bookmarks
+            </a>
+
+            <div class="divider"></div>
+
+            <div class="code-box-container">
+                <label>Manual Code</label>
+                <textarea class="code-box" rows="2" readonly>javascript:(function(){var text=document.body.innerText||document.body.textContent;alert('Estimated Word Count: ' + text.trim().split(/\s+/).length);})();</textarea>
+            </div>
+        </article>
+
+    </main>
 
 </body>
 </html>
-

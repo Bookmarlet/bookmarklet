@@ -1,1 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarklet Installer</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Replace the src with your own GIF or PNG file -->
+        <img class="preview-img" src="https://placeholder.com" alt="Bookmarklet Feature Graphic">
+        
+        <h1>Dark Mode Toggle</h1>
+        <p>A simple tool to force dark mode on any website. Choose your preferred installation method below.</p>
+
+        <!-- Method 1: Drag & Drop Installation Button -->
+        <!-- Replace the javascript code inside href with your custom tool logic -->
+        <a class="bookmarklet-btn" href="javascript:(function(){var el=document.createElement('style');el.innerHTML='html { filter: invert(1) hue-rotate(180deg); } img, video { filter: invert(1) hue-rotate(180deg); }';document.head.appendChild(el);})();" title="Drag me to your bookmarks bar">
+            <span>&eand;</span> Drag to Bookmarks Bar
+        </a>
+
+        <div class="divider"></div>
+
+        <!-- Method 2: Manual Copy & Paste Box -->
+        <div class="code-box-container">
+            <label for="bookmarkletCode">Code Snippet</label>
+            <!-- Single click inside this box auto-selects everything for fast manual copy -->
+            <textarea id="bookmarkletCode" class="code-box" rows="3" readonly>javascript:(function(){var el=document.createElement('style');el.innerHTML='html { filter: invert(1) hue-rotate(180deg); } img, video { filter: invert(1) hue-rotate(180deg); }';document.head.appendChild(el);})();</textarea>
+            <span class="hint">Click inside the box to auto-select all, copy (Ctrl+C), and paste into a bookmark URL field.</span>
+        </div>
+    </div>
+
+</body>
+</html>
 
